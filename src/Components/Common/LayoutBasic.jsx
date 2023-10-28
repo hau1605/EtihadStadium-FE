@@ -1,27 +1,55 @@
 import React from "react";
-import {Box, Toolbar, Typography, Button, AppBar, IconButton, Avatar, Divider, Grid} from "@mui/material";
-import {Menu, AccountCircleOutlined, YouTube, Instagram, Twitter, Facebook, LinkedIn, Language, ArrowUpward} from '@mui/icons-material';
+import {Box, Toolbar, Typography, Button, AppBar, IconButton, Avatar, Divider, Grid, MenuItem, Menu} from "@mui/material";
+import {AccountCircleOutlined, YouTube, Instagram, Twitter, Facebook, LinkedIn, Language, ArrowUpward, AcUnit, Spa, Sailing, Hive, Diamond, Image} from '@mui/icons-material';
 
 const LayoutBasic = ({ children }) => {
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    console.log(event.currentTarget);
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <Box>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar sx={{py: 1, bgcolor: '#98c5e9', color: '#98c5e9'}}>
-            {/* <IconButton sx={{mr: 2}}>
-              <Menu sx={{color: 'white'}} fontSize="large"/>
-            </IconButton> */}
             <Avatar
               alt="man city"
               src="https://www.mancity.com/dist/images/logos/crest.svg"
               sx={{ width: 80, height: 80 }}
             />
-            <Typography variant="h5" sx={{ml: 2, color: '#001838'}}>HOME</Typography>
-            <Typography variant="h5" sx={{ml: 2, color: '#001838'}}>VIDEOS</Typography>
-            <Typography variant="h5" sx={{ml: 2, color: '#001838'}}>PLAYERS</Typography>
-            <Typography variant="h5" sx={{ml: 2, color: '#001838'}}>RANKING</Typography>
-            <Typography variant="h5" sx={{ml: 2, color: '#001838', flexGrow: 1}}>ETIHAD STADIUM</Typography>
-            <Button>
+            <Button sx={{ml: 2, color: '#001838'}}>
+              <Typography variant="h5">HOME</Typography>
+            </Button>
+            <Button sx={{ml: 2, color: '#001838'}}>
+              <Typography variant="h5">VIDEOS</Typography>
+            </Button>
+            <Button sx={{ml: 2, color: '#001838'}}>
+              <Typography variant="h5" >PLAYERS</Typography>
+            </Button>
+            <Button sx={{ml: 2, color: '#001838'}}> 
+              <Typography variant="h5" >TOURS</Typography>
+            </Button>
+            <Box>
+              <Button onClick={handleClick} sx={{ml: 2, color: '#001838'}}>
+                <Typography variant="h5">STADIUM</Typography>
+              </Button>
+              <Menu
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+              >
+                <MenuItem sx={{minWidth: 120, justifyContent: 'center'}} onClick={handleClose}>Skema</MenuItem>
+                <MenuItem sx={{minWidth: 120, justifyContent: 'center'}} onClick={handleClose}>Visit 3D</MenuItem>
+              </Menu>
+            </Box>
+            <Button sx={{flex: 'auto', justifyContent: 'end'}}>
               <Typography variant="h5" sx={{color: "#001838"}}>Login</Typography>
               <IconButton>
                 <AccountCircleOutlined fontSize="large" sx={{color: '#001838'}}/>
@@ -31,12 +59,16 @@ const LayoutBasic = ({ children }) => {
         </AppBar>
       </Box>
       {children}
+      <Box display='flex' py={2} justifyContent='center' className='etihad-puma'> 
+        <img style={{objectFit:'fill'}} src="https://www.mancity.com/meta/media/hpnbkq5d/partner_logo_etihad.png?width=160&height=80" alt='etihad'/>
+        <img src="https://www.mancity.com/meta/media/j20jxszx/partner_logo_puma.png?width=160&height=80" alt='puma'/>
+      </Box>
       <Box p={4} bgcolor='#001838'>
         <Grid container mb={3}>
-          <Grid item xs={2} display='flex' alignItems='center' justifyContent='center'>
+          <Grid item md={2} sm={6}  display='flex' alignItems='center' justifyContent='center'>
             <Avatar alt="man city" src="https://www.mancity.com/dist/images/logos/crest.svg" sx={{width: 200, height: 200}}/>
           </Grid>
-          <Grid item xs={8} >
+          <Grid item md={8} sm={12}>
             <Box display="flex" justifyContent='center'>
               <IconButton sx={{bgcolor: '#083456', mr: 3}}>
                 <YouTube fontSize="large" sx={{color:"#3bd6ff"}} />
@@ -69,7 +101,7 @@ const LayoutBasic = ({ children }) => {
               <Typography variant="h5" sx={{ml: 2, color: 'white'}}>Sitemap</Typography>
             </Box>
           </Grid>
-          <Grid item xs={2} display='flex' alignItems='center' justifyContent='center'>
+          <Grid item md={2} sm={6} display='flex' alignItems='center' justifyContent='center'>
             <Typography variant="h5" 
             sx={{ml: 2, textDecoration: 'underline', color: 'white'}}>
             Back to the top
@@ -81,17 +113,32 @@ const LayoutBasic = ({ children }) => {
         </Grid>
         <Divider sx={{height: 2, borderColor: '#ccc'}}/>
         <Grid container mt={3}>
-            <Grid item xs={3}>
+            <Grid item xs={2}>
               <Typography variant="h5" sx={{ml: 2, color: 'white', textDecoration: 'underline', fontWeight: 400}}>Fan Support</Typography>
             </Grid>
-            <Grid item xs={6}>
-
+            <Grid item xs={8} display='flex' alignItems='center' justifyContent='center'>
+              <IconButton sx={{bgcolor:'#083456', mr: 3}}>
+                <AcUnit fontSize="large" sx={{color:"#3bd6ff"}}/>
+              </IconButton>
+              <IconButton sx={{bgcolor:'#083456', mr: 3}}>
+                <Spa fontSize="large" sx={{color:"#3bd6ff"}}/>
+              </IconButton>
+              <IconButton sx={{bgcolor:'#083456', mr: 3}}>
+                <Sailing fontSize="large" sx={{color:"#3bd6ff"}}/>
+              </IconButton>
+              <IconButton sx={{bgcolor:'#083456', mr: 3}}>
+                <Hive fontSize="large" sx={{color:"#3bd6ff"}}/>
+              </IconButton>
+              <IconButton sx={{bgcolor:'#083456', mr: 3}}>
+                <Diamond fontSize="large" sx={{color:"#3bd6ff"}}/>
+              </IconButton>
             </Grid>
-            <Grid item xs={3} display='flex' alignItems='center' justifyContent='center'>
+            <Grid item xs={2} display='flex' alignItems='center' justifyContent='center'>
               <Typography variant="h5" sx={{ml: 2, color: 'white', fontWeight: 200}}>Manchester City FC Ltd 2023</Typography>
             </Grid>
         </Grid>
       </Box>
+      
     </Box>
   );
 };

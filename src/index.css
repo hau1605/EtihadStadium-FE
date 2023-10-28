@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.etihad-puma{
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAPUlEQVQYlWMsevn/PwMDA0OvGAMjAx7AhE8SGTD+hxiIExS/YvhPkokshEyCuZ18E9FNggHSTcRlEskmAgD7MBJvQ1V/KQAAAABJRU5ErkJggg==);
+  background-size: 5px 5px;
+  justify-content: center;
+  
+}
