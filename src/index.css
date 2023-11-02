@@ -1,12 +1,22 @@
+@font-face {
+  font-family: Etihad_font;
+  src:url('../src/font/KippaxModernCondensedRegular.otf') ;
+  
+ }@font-face {
+  font-family: Etihad_font_p;
+  src:url('../src/font/_Kippax_Modern_Regular.otf') ;
+  
+ }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: Etihad_font,
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+p{
+  font-family: Etihad_font_p
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

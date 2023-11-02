@@ -15,7 +15,7 @@ const LayoutBasic = ({ children }) => {
   };
 
   return (
-    <Box>
+    <Box >
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar sx={{py: 1, bgcolor: '#98c5e9', color: '#98c5e9'}}>
@@ -29,7 +29,7 @@ const LayoutBasic = ({ children }) => {
             </Button>
             <Button sx={{ml: 2, color: '#001838'}}>
               <Typography variant="h5">VIDEOS</Typography>
-            </Button>
+            </Button>zz
             <Button sx={{ml: 2, color: '#001838'}}>
               <Typography variant="h5" >PLAYERS</Typography>
             </Button>

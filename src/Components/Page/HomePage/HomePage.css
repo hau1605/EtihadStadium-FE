@@ -1,0 +1,146 @@
+.Home_layout {
+    background-color: #f3f6f9;
+    padding-bottom: 50px;
+}
+
+.Home_Banner {
+    position: relative;
+    height: 350px;
+    width: 100%;
+    background: url(../../../img/Home_Banner.webp)center no-repeat;
+    background-size:cover;
+    z-index: 1;
+
+}
+
+
+.Home_Banner h1 {
+    position: absolute;
+    top: 30px;
+    left: 150px;
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+
+.Home_Intro_div {
+    flex-direction: column;
+    border: 1px #dde6ed solid;
+    display: flex;
+    box-sizing: border-box;
+    height: 250px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+}
+
+.Home_Content_div{
+    flex-direction: column;
+    border: 1px #dde6ed solid;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: white;
+}
+
+.Home_Content_div h2 {
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: bolder;
+    margin-top: 0;
+    line-height: 1;
+    text-align: left;
+    align-self: start;
+}
+
+
+.Home_Content_div p {
+    margin: 0;
+    color: #69738c;
+    font-size: 13px;
+    
+}
+
+.Home_intro-first {
+    background-color: #001838;
+    color: white;
+    border: none;
+    box-shadow: 0px 1px 5px #001838;
+}
+
+#Home_intro-first-link {
+    color: #3bd6ff;
+    font-size: 14px;
+}
+
+#Home_intro-first-text {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+#Home_intro-first-title {
+    font-size: 45px;
+    line-height: 1;
+}
+
+.Home_Intro_div:hover, .Home_Content_div:hover, .Home_Tour_div:hover{
+    border: #001838 1px solid;
+}
+
+.Home_Intro_div h2 {
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 0;
+    line-height: 1;
+}
+
+.Home_Intro_div p {
+    margin: 0;
+    color: #69738c;
+    font-size: 13px;
+}
+
+
+.Home_Tour_div{
+    border: 1px #dde6ed solid;
+
+    display: flex;
+    background-color: white;
+    text-align: center;
+    justify-content: space-between;
+}
+.Home_Tour_div h4{
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+     display: flex;
+}
+
+.line{
+    content: '';
+    border: 1px #dde6ed solid;
+height: 0.5px;
+}
+.Home_Contact_link,.Home_Contact_link a{
+    color: #001838;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.Home_router_link{
+    color: #001838;
+    text-decoration: none;
+}
+.Home_router_link:hover{
+    text-decoration: underline;
+}
