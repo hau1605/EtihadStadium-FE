@@ -1,0 +1,22 @@
+.Video_desc{
+    display: flex;
+    align-content: center;
+}
+.Video_desc_long{
+    color: #001838;
+background-color: white;
+padding: 0px 3px;
+border-radius: 3px;
+font-size: 10px;
+margin-right: 5px;
+height: 13px;
+margin-top: 2px;
+font-weight: bolder;
+
+}
+.Video_desc_type{
+    color: white;
+    font-size: 13px;
+    color: #3bd6ff;
+
+}

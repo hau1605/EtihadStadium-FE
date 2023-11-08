@@ -1,7 +1,7 @@
 import React from "react";
 import {Box, Toolbar, Typography, Button, AppBar, IconButton, Avatar, Divider, Grid, MenuItem, Menu} from "@mui/material";
 import {AccountCircleOutlined, YouTube, Instagram, Twitter, Facebook, LinkedIn, Language, ArrowUpward, AcUnit, Spa, Sailing, Hive, Diamond, Image} from '@mui/icons-material';
-
+import { Link } from "react-router-dom";
 const LayoutBasic = ({ children }) => {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -24,15 +24,22 @@ const LayoutBasic = ({ children }) => {
               src="https://www.mancity.com/dist/images/logos/crest.svg"
               sx={{ width: 80, height: 80 }}
             />
+            <Link to='/'>
             <Button sx={{ml: 2, color: '#001838'}}>
               <Typography variant="h5">HOME</Typography>
             </Button>
+            </Link>
+            <Link to='/Video'>
             <Button sx={{ml: 2, color: '#001838'}}>
               <Typography variant="h5">VIDEOS</Typography>
-            </Button>zz
+            </Button>
+            </Link>
+            <Link to='/Player'>
             <Button sx={{ml: 2, color: '#001838'}}>
               <Typography variant="h5" >PLAYERS</Typography>
             </Button>
+            </Link>
+            
             <Button sx={{ml: 2, color: '#001838'}}> 
               <Typography variant="h5" >TOURS</Typography>
             </Button>

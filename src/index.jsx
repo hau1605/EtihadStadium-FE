@@ -6,8 +6,8 @@ import {RouterProvider, createBrowserRouter} from "react-router-dom";
 import App from './App';
 import HomePage from './Components/Page/HomePage/HomePage';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
+import VideoPage from './Components/Page/VideoPage/VideoPage';
+import PlayerPage from './Components/Page/PlayerPage/PlayerPage';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,6 +17,12 @@ const router = createBrowserRouter([
         path: "/",
         element: <HomePage />,
       },
+      {
+        path:"/Video",
+        element:<VideoPage/>
+      },{
+      path:"/Player",
+      element:<PlayerPage/>}
     ],
   },
 ]);

@@ -1,0 +1,24 @@
+.Player_card:hover .Player_card_name{
+    cursor: pointer;
+    background-color: #001838;
+    color: white;
+}
+.Player_card:hover {
+    cursor: pointer;
+}
+.Player_card:hover .Player_card_number{
+    -webkit-text-fill-color:#001838;
+}
+.Player_card_number{
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke-width:2px;
+    
+}
+.Player_card_name{
+    color:#001838;
+    font-weight:bolder;
+    padding:10px;
+    padding-right: 200px;
+    background-color:white;
+    margin:0 ;
+}
