@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import {RouterProvider, createBrowserRouter} from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from './App';
 import { Provider } from "react-redux";
 import { store } from "./Components/redux/store";
@@ -11,26 +11,39 @@ import HomePage from './Components/Page/HomePage/HomePage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import VideoPage from './Components/Page/VideoPage/VideoPage';
 import PlayerPage from './Components/Page/PlayerPage/PlayerPage';
+import Login from './Components/Page/Login/Login';
+import Register from './Components/Page/Register/Register';
+import DevelopmentPage from './Components/Page/DevelopmentPage/DevelopmentPage';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     children: [
       {
         path: "/",
         element: <HomePage />,
       },
       {
-        path:"/Video",
-        element:<VideoPage/>
+        path: "/Video",
+        element: <VideoPage />
       },
       {
-      path:"/Player",
-      element:<PlayerPage/>},
+        path: "/Player",
+        element: <PlayerPage />
+      },
       {
-        path:"/Development",
-        element:<DevelopmentPage/>}
-      
+        path: "/Login",
+        element: <Login />
+      },
+      {
+        path: "/Register",
+        element: <Register />
+      },
+      {
+        path: "/Development",
+        element: <DevelopmentPage />
+      }
+
     ],
   },
 ]);
@@ -38,10 +51,10 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-   
-      <React.StrictMode>
-        <RouterProvider router={router} />
-      </React.StrictMode>
+
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
   </Provider>
 );
 
