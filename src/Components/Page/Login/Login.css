@@ -1,0 +1,187 @@
+.global-nav {
+    background: #98C5E9;
+    color: #001838;
+    padding: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+}
+.global-nav__inner-wrapper{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+}
+.global-nav__link-wrapper{
+    position: absolute;
+    left: 0;
+}
+.global-nav__link{
+    padding: 12px 24px;
+}
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+    display: block;
+}
+.global-nav__link svg {
+    transform: rotate(90deg);
+    height: 24px;
+    width: 24px;
+}
+.global-nav__logo-wrapper{
+    box-sizing: border-box;
+}
+.player-banner {
+    height: 320px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 68px;
+    padding: 0;
+}
+.player-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../../../img/login_background.svg') no-repeat center;
+    background-size: cover;
+}
+.player-banner__player-image{
+    position: relative;
+    margin: 0 auto;
+    right: auto;
+    left: 35%;
+    height: 100%;
+}
+.page-wrapper{
+    max-width: 638px;
+    padding-top: 140px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.container {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.tab-header__button.is-active{
+    background: #001838;
+    color: #38D6FF;
+}
+.tab-header__button--left{
+    border-radius: 4px 0 0 4px;
+}
+.tab-header__button {
+    text-decoration: none;
+    width: 180px;
+    outline: none;
+    border: 2px solid #001838;
+    padding: 10px;
+    text-transform: uppercase;
+    background: white;
+    color: #001838;
+    font-size: 32px;
+    line-height: 33px;
+    font-family: KippaxCondensed;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.tab-header__button--right {
+    border-radius: 0 4px 4px 0;
+}
+@media (min-width: 768px) {
+    .tab-header__button {
+        font-size: 40px;
+        line-height: 40px;
+    }
+}
+
+.page-content {
+    background: #fff;
+    padding: 24px 16px 40px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    grid-gap: 24px;
+    color: #001838;
+}
+.tab-header+.page-content {
+    padding-top: 56px;
+}
+
+.page-content__footer {
+    margin: auto 0 0;
+    padding-top: 20px;
+    border-top: 1px solid #98C5E9;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 18px;
+}
+.button__link {
+    background: transparent;
+    color: #001838;
+    border: none;
+    text-decoration: underline;
+    text-transform: initial;
+    text-align: start;
+    padding: 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    width: auto;
+    font-size: inherit;
+    line-height: inherit;
+    -webkit-transition: none;
+    transition: none;
+    border-radius: 2px;
+}

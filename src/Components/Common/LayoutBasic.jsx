@@ -1,9 +1,10 @@
 import React from "react";
+import {  useNavigate } from "react-router-dom";
 import {Box, Toolbar, Typography, Button, AppBar, IconButton, Avatar, Divider, Grid, MenuItem, Menu} from "@mui/material";
-import {AccountCircleOutlined, YouTube, Instagram, Twitter, Facebook, LinkedIn, Language, ArrowUpward, AcUnit, Spa, Sailing, Hive, Diamond, Image} from '@mui/icons-material';
+import {AccountCircleOutlined, YouTube, Instagram, Twitter, Facebook, LinkedIn, Language, ArrowUpward, AcUnit, Spa, Sailing, Hive, Diamond} from '@mui/icons-material';
 import { Link } from "react-router-dom";
 const LayoutBasic = ({ children }) => {
-
+  const navigate = useNavigate()
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -13,7 +14,16 @@ const LayoutBasic = ({ children }) => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
+  const user = JSON.parse(localStorage.getItem("user"));
+  console.log(user);
+  const Logout = () => {
+    window.localStorage.removeItem("JWT");
+    window.localStorage.removeItem("Email");
+    window.localStorage.removeItem("user");
+    window.localStorage.removeItem("refreshToken");
+ 
+    navigate("/Login");
+  };
   return (
     <Box >
       <Box sx={{ flexGrow: 1 }}>
@@ -59,12 +69,27 @@ const LayoutBasic = ({ children }) => {
                 <MenuItem sx={{minWidth: 120, justifyContent: 'center'}} onClick={handleClose}>Visit 3D</MenuItem>
               </Menu>
             </Box>
-            <Button sx={{flex: 'auto', justifyContent: 'end'}}>
+            {
+              !!user ? (
+              <><Button onClick={ Logout } sx={{flex: 'auto', justifyContent: 'end'}}>
+                <Typography variant="h5" sx={{color: "#001838"}}>Logout</Typography>
+                
+              </Button>
+              <Button onClick={ () => { navigate('/Profile') }}>
+                <IconButton>
+                  <AccountCircleOutlined fontSize="large" sx={{color: '#001838'}}/>
+                </IconButton>
+              </Button>
+              </>) : (
+              (<Button onClick={ () => {navigate('/Login')}} sx={{flex: 'auto', justifyContent: 'end'}}>
               <Typography variant="h5" sx={{color: "#001838"}}>Login</Typography>
               <IconButton>
                 <AccountCircleOutlined fontSize="large" sx={{color: '#001838'}}/>
               </IconButton>
-            </Button>
+              </Button>)
+            )
+            }
+            
           </Toolbar>
         </AppBar>
       </Box>
