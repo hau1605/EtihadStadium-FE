@@ -1,0 +1,38 @@
+.Development_top_div{
+    background-color: #001838;
+    text-align: center;
+    padding: 25px;
+    margin: 60px 0;
+    border: #3bd6ff 3px solid;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Development_top_div:hover{
+    cursor: pointer;
+}
+.Development_top_div:hover h5{
+    text-decoration: underline;
+}
+.Development_top_div h3{
+     color: white;
+     text-transform: uppercase;
+     justify-self: flex-start;
+}
+.Development_top_div h5{
+    color: #3bd6ff;
+    font-weight: bold;
+    justify-self: flex-end;
+}
+.accordion-button {
+    background-color: #eef2f6;
+}
+.accordion-button:focus{
+    background-color: #eef2f6;
+
+}
+.Development_feature_div{
+    height: 100%;
+
+}

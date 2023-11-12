@@ -52,7 +52,10 @@ const LayoutBasic = ({ children }) => {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem sx={{minWidth: 120, justifyContent: 'center'}} onClick={handleClose}>Skema</MenuItem>
+                <Link to='/Development' style={{color:'black',textDecoration:'none'}}>
+                  <MenuItem sx={{minWidth: 120, justifyContent: 'center'}} onClick={handleClose}>Skema</MenuItem>
+                </Link>
+               
                 <MenuItem sx={{minWidth: 120, justifyContent: 'center'}} onClick={handleClose}>Visit 3D</MenuItem>
               </Menu>
             </Box>

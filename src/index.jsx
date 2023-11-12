@@ -8,6 +8,7 @@ import HomePage from './Components/Page/HomePage/HomePage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import VideoPage from './Components/Page/VideoPage/VideoPage';
 import PlayerPage from './Components/Page/PlayerPage/PlayerPage';
+import DevelopmentPage from './Components/Page/DevelopmentPage/DevelopmentPage';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
       },{
       path:"/Player",
       element:<PlayerPage/>}
+      ,
+      {
+        path:"/Development",
+        element:<DevelopmentPage/>}
+      
     ],
   },
 ]);
