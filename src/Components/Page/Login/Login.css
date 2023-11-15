@@ -1,7 +1,6 @@
 .global-nav {
     background: #98C5E9;
     color: #001838;
-    padding: 12px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -65,18 +64,21 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 68px;
+    top: 88px;
     padding: 0;
 }
 .player-banner::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 5px;
     right: 0;
     bottom: 0;
     left: 0;
-    background: url('../../../img/login_background.svg') no-repeat center;
-    background-size: cover;
+    height: 130%;
+    min-height: 250px;
+    background: url("../../../img/3.webp") bottom right 60px no-repeat,url('../../../img/login_background.svg') no-repeat center;
+
+    background-size: 18%,100%;
 }
 .player-banner__player-image{
     position: relative;
@@ -103,6 +105,13 @@
     margin-right: auto;
     width: 100%;
 }
+.tab-header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -25px;
+    text-align: center;
+    
+}
 .tab-header__button.is-active{
     background: #001838;
     color: #38D6FF;
@@ -112,17 +121,19 @@
 }
 .tab-header__button {
     text-decoration: none;
-    width: 180px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
     outline: none;
+    padding: 5px 10px;
+    width: 33%;
     border: 2px solid #001838;
-    padding: 10px;
     text-transform: uppercase;
     background: white;
     color: #001838;
-    font-size: 32px;
-    line-height: 33px;
     font-family: KippaxCondensed;
     -webkit-box-pack: center;
+    font-weight: 600;
     -ms-flex-pack: center;
     justify-content: center;
     cursor: pointer;
@@ -133,14 +144,14 @@
 }
 @media (min-width: 768px) {
     .tab-header__button {
-        font-size: 40px;
+        font-size: 34px;
         line-height: 40px;
     }
 }
 
 .page-content {
     background: #fff;
-    padding: 24px 16px 40px;
+    padding: 24px 55px 40px;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -151,6 +162,8 @@
     flex-direction: column;
     grid-gap: 24px;
     color: #001838;
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px rgb(168, 168, 168);
 }
 .tab-header+.page-content {
     padding-top: 56px;

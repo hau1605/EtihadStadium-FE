@@ -7,7 +7,8 @@ import { useState } from "react";
 import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-
+import {Box, Toolbar, Typography, AppBar, IconButton, Avatar, Divider, Grid, MenuItem, Menu} from "@mui/material";
+import {AccountCircleOutlined, YouTube, Instagram, Twitter, Facebook, LinkedIn, Language, ArrowUpward, AcUnit, Spa, Sailing, Hive, Diamond} from '@mui/icons-material';
 function Login(props) {
   const [useremail, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -83,7 +84,7 @@ const handleShow = () => setShow(true);
           </li>
           <li className="global-nav__logo-wrapper">
             <a href="/">
-              <img src="https://www.mancity.com/dist/images/logos/crest.svg" alt="Link to Manchester City homepage" />
+              <img style={{height:'80px',margin:'10px 0'}}  src="https://www.mancity.com/dist/images/logos/crest.svg" alt="Link to Manchester City homepage" />
             </a>
           </li>
         </ul>
@@ -98,9 +99,12 @@ const handleShow = () => setShow(true);
         </div>
         <section className="page-content">
           <div className="loginForm">
-            <h3>Đăng nhập</h3>
             <form action="POST" onSubmit={handleSubmit}>
-              <input
+              <p style={{margin:'0'}}>Username</p>
+              <input style={{display:'flex',alignItems:'center',borderRadius:'5px',
+              border:'1px solid #38D6FF',
+              width:'100%', padding:'5px 15px 8px',
+            margin:'10px 0 15px'}}
                 value={useremail}
                 onChange={(e) => setEmail(e.target.value)}
                 type="text"
@@ -108,7 +112,11 @@ const handleShow = () => setShow(true);
                 placeholder="Email"
                 required
               />
-              <input
+              <p style={{margin:'0'}}>Password</p>
+              <input style={{display:'flex',alignItems:'center',borderRadius:'5px',
+              border:'1px solid #38D6FF',
+              width:'100%', padding:'5px 15px 8px',
+            margin:'10px 0 15px'}}
                 onChange={(e) => setPassword(e.target.value)}
                 type="password"
                 value={password}
@@ -116,25 +124,74 @@ const handleShow = () => setShow(true);
                 placeholder="Mật khẩu"
                 required
               />
-              <button name="submit" type="submit">
-                Đăng nhập
+              <br />
+              <button style={{width:'100%',padding:'5px 0 6px',color:'white',
+            backgroundColor:'#001838',fontWeight:'bold', borderRadius:'8px'}} name="submit" type="submit">
+                ĐĂNG NHẬP
               </button>
             </form>
-            <br></br>
-            <Link to="/Register">
-              <p>Bạn chưa có tài khoản? Đăng ký ngay</p>
-            </Link>
           </div>
           <section className="page-content__footer">
             <div>
-              <p>
+              <h5>
                 Don't have an account? 
                 <a href="/Register" className="button__link">{" "} Register Now</a>
-              </p>
+              </h5>
             </div>
           </section>
         </section>
       </main>
+      <Box p={4} bgcolor='#98C5E9' style={{marginTop:'100px'}}>
+        <Grid container mb={3}>
+          <Grid item md={2} sm={6}  display='flex' alignItems='center' justifyContent='center'>
+            <Avatar alt="man city" src="https://www.mancity.com/dist/images/logos/crest.svg" sx={{width: 200, height: 200}}/>
+          </Grid>
+          <Grid item md={8} sm={12}>
+            <Box display="flex" justifyContent='center'>
+              <IconButton sx={{bgcolor: '#083456', mr: 3}}>
+                <YouTube fontSize="large" sx={{color:"#3bd6ff"}} />
+              </IconButton>
+              <IconButton sx={{bgcolor:'#083456', mr: 3}}>
+                <Instagram fontSize="large" sx={{color:"#3bd6ff"}}/>
+              </IconButton>
+              <IconButton sx={{bgcolor:'#083456', mr: 3}}>
+                <Twitter fontSize="large" sx={{color:"#3bd6ff"}}/>
+              </IconButton>
+              <IconButton sx={{bgcolor:'#083456', mr: 3}}>
+                <Facebook fontSize="large" sx={{color:"#3bd6ff"}}/>
+              </IconButton>
+              <IconButton sx={{bgcolor:'#083456', mr: 3}}>
+                <LinkedIn fontSize="large" sx={{color:"#3bd6ff"}}/>
+              </IconButton>
+              <IconButton sx={{bgcolor:'#083456', mr: 3}}>
+                <Language fontSize="large" sx={{color:"#3bd6ff"}}/>
+              </IconButton>
+            </Box>
+            <Box display="flex" mt={4} justifyContent='center'>
+              <Typography variant="h5" sx={{ml: 2, color: 'white'}}>Accessibility</Typography>
+              <Typography variant="h5" sx={{ml: 2, color: 'white'}}>Fair Processing Notice</Typography>
+              <Typography variant="h5" sx={{ml: 2, color: 'white'}}>Cookie Policy</Typography>
+              <Typography variant="h5" sx={{ml: 2, color: 'white'}}>Privacy Policy</Typography>
+              <Typography variant="h5" sx={{ml: 2, color: 'white'}}>Terms of Use</Typography>
+            </Box>
+            <Box display="flex" mt={4} justifyContent='center'>
+              <Typography variant="h5" sx={{ml: 2, color: 'white'}}>Contact Us</Typography>
+              <Typography variant="h5" sx={{ml: 2, color: 'white'}}>Sitemap</Typography>
+            </Box>
+          </Grid>
+          <Grid item md={2} sm={6} display='flex' alignItems='center' justifyContent='center'>
+            <Typography variant="h5" 
+            sx={{ml: 2, textDecoration: 'underline', color: 'white'}}>
+            Back to the top
+              <IconButton>
+                <ArrowUpward fontSize="large" sx={{color: "white"}}/>
+              </IconButton>
+            </Typography>
+          </Grid>
+        </Grid>
+        <Divider sx={{height: 2, borderColor: '#ccc'}}/>
+        
+      </Box>
       <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Thông báo</Modal.Title>
