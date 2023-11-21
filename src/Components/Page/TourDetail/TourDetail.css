@@ -1,0 +1,172 @@
+body {
+    font: normal 14px Kippax,sans-serif;
+}
+.ff-tours-timeslots__header {
+    padding: 40px 0;
+    text-align: center;
+    font-size: 16px;
+    line-height: 14px;
+    background-color: #001838;
+    color: #fff;
+}
+.container {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+.ff-tours-timeslots__info-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 14px;
+    text-transform: capitalize;
+}
+.ff-tours-timeslots__info-cont {
+    padding-top: 30px;
+}
+.ff-tours-timeslots__info-cont .ff-tours-timeslots__info-title {
+    text-transform: uppercase;
+}
+.ff-tours-timeslots__info-section {
+    background-color: #fff;
+    padding: 15px;
+    display: flex;
+}
+.ff-tours-timeslots__info-item {
+    padding: 10px;
+    font-size: 16px;
+}
+.ff-tours-timeslots__info-item--label{
+    text-transform: uppercase;
+    margin: 0 0 15px;
+    font-size: 12px;
+}
+.ff-tours-timeslots__info-item--datepicker {
+    display: flex;
+    align-items: center;
+}
+.ff-tours-timeslots__info-item--datepicker>div {
+    margin: 0 20px 0 0;
+}
+.ff-tours-timeslots__info-item--datepicker .mc-datepicker {
+    margin-top: 0;
+}
+.ff-tours-timeslots__datepicker-wrapper .mc-datepicker__link {
+    color: #001838;
+    font-weight: bold;
+    display: block;
+}
+.ff-tours-timeslots__datepicker-wrapper {
+    margin: 0 20px 0 0;
+}
+
+.ff-tours-timeslots__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.ff-tours-timeslots__slot {
+    width: 220px;
+    font-size: 16px;
+    margin: 10px;
+    border: 1px solid #989898;
+    padding: 10px;
+    height: 64px;
+    background-color: #fff;
+    text-decoration: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #001838;
+}
+.ff-tours-timeslots__slot:hover {
+    border: 1px solid #6caddf;
+    background-color: rgba(152,197,233,.3);
+}
+.ff-tours-timeslots__slot b {
+    font-weight: bolder;
+}
+
+.ff-tours-timeslots__slot .ff-tours-timeslots__slot-numbers {
+    font-size: 13px;
+}
+
+.mc-button {
+    display: block;
+    min-height: 40px;
+    padding: 12px 12px 13px;
+    cursor: pointer;
+    font-family: Kippax,sans-serif;
+    color: #fff;
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: .14px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #001838;
+    background-color: #001838;
+    width: 6rem;
+}
+
+.mc-button--secondary {
+    color: #001838;
+    background-color: #fff;
+    border: 1px solid #001838;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.ff-tours-timeslots__info-title {
+    letter-spacing: 0;
+    font-size: 56px;
+    line-height: 55px;
+}
+
+h2 {
+    margin-top: 0;
+    font-family: KippaxCondensed,sans-serif;
+    font-weight: 700;
+}
+main {
+    background: #f3f6f9;
+}
+.ff-tours-timeslots__header h2 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 14px;
+    text-transform: capitalize;
+}
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+.back-btn img {
+    width: 1em;
+    position: relative;
+    top: -1px
+}
+.explore-more__icon {
+    width: 16px;
+    height: 16px;
+    margin-left: auto;
+}

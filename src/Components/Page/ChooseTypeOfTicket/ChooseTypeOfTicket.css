@@ -1,0 +1,83 @@
+body {
+    font-family: "Kippax", Helvetica, Arial, sans-serif !important;
+    letter-spacing: normal !important;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    background-color: #ffffff;
+}
+.ticket-wrapper {
+    background-color: #ffffff;
+}
+#eventPage {
+    clear: both;
+}
+#eventPage .infoSection, body #eventPage .eventInfoSection.infoSection {
+    position: relative;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+.eventTitle, #eventPage .infoSection {
+    position: relative;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    margin: 0;
+    float: none;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    font-size: inherit;
+    min-height: 0;
+    /* display: flex !important; */
+    white-space: normal;
+}
+
+#eventPage .infoSection .name {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-top: 0;
+    width: 100% !important;
+    overflow: visible;
+    white-space: normal;
+    height: auto;
+    max-height: none;
+}
+.eventDetails img {
+    position: relative;
+    width: 14px;
+    top: -1px;
+}
+.eventDetails div:not(.name) {
+    display: inline-block;
+    width: auto;
+}
+.container-fluid .content .content-item {
+    overflow: auto;
+    line-height: 42px;
+    padding: 10px 0;
+    border-top: 1px solid #e9e9e9;
+    border-radius: 0;
+    width: 100%;
+    clear: both;
+    float: none;
+    display: flex;
+}
+.container-fluid .content .content-item .priceType {
+    margin-left: 0;
+    font-weight: 600;
+    float: none;
+    margin: 0;
+}
+
+.container-fluid .content .content-item .total {
+    padding-right: 0;
+    text-align: right;
+    display: block;
+    width: 7em;
+}
+
+.container-fluid .content .content-item .ops {
+    float: right;
+    margin-left: 0.5em;
+}

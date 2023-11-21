@@ -14,6 +14,8 @@ import PlayerPage from './Components/Page/PlayerPage/PlayerPage';
 import Login from './Components/Page/Login/Login';
 import Register from './Components/Page/Register/Register';
 import DevelopmentPage from './Components/Page/DevelopmentPage/DevelopmentPage';
+import TourDetail from './Components/Page/TourDetail/TourDetail';
+import ChooseTypeOfTicket from './Components/Page/ChooseTypeOfTicket/ChooseTypeOfTicket';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,8 +44,15 @@ const router = createBrowserRouter([
       {
         path: "/Development",
         element: <DevelopmentPage />
+      },
+      {
+        path: "/ChooseTime",
+        element: <TourDetail />
+      },
+      {
+        path: "/ChooseTypeOfTicket",
+        element: <ChooseTypeOfTicket />
       }
-
     ],
   },
 ]);
