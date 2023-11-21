@@ -22,6 +22,7 @@ import OrderDetailAdmin from './Components/Page/Admin/OrderDetailAdmin/OrderDeta
 import TypeProductList from './Components/Page/Admin/TypeProductList/TypeProductList';
 import TypeProductEdit from './Components/Page/Admin/TypeProductEdit/TypeProductEdit';
 import NewTypeProduct from './Components/Page/Admin/NewTypeProduct/NewTypeProduct';
+import TourPage from './Components/Page/Tour/TourPage';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "/Development",
         element: <DevelopmentPage />
+      },
+      {
+        path: "/Tour",
+        element: <TourPage/>
       },
       {
         path: "Admin",

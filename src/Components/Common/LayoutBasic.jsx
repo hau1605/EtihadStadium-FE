@@ -50,10 +50,11 @@ const LayoutBasic = ({ children }) => {
               <Typography variant="h5" >PLAYERS</Typography>
             </Button>
             </Link>
-            
+            <Link to='/Tour'>
             <Button sx={{ml: 2, color: '#001838'}}> 
               <Typography variant="h5" >TOURS</Typography>
             </Button>
+            </Link>
             <Box>
               <Button onClick={handleClick} sx={{ml: 2, color: '#001838'}}>
                 <Typography variant="h5">STADIUM</Typography>
