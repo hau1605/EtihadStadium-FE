@@ -7,7 +7,11 @@ import "./HomePage.css"
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
+import {  useNavigate } from "react-router-dom";
+
 const HomePage = () => {
+  const navigate = useNavigate()
+
   return (
     <LayoutBasic>
 
@@ -32,7 +36,7 @@ const HomePage = () => {
               </div>
             </Col >
             <Col >
-              <div className="Home_Intro_div">
+              <div className="Home_Intro_div" onClick={()=>navigate('/Development')}>
                 <h2>
                   <a href="" className='Home_router_link'>
                   ETIHAD STADIUM DEVELOPMENT
@@ -45,7 +49,7 @@ const HomePage = () => {
               </div>
             </Col>
             <Col >
-              <div className="Home_Intro_div">
+              <div className="Home_Intro_div" onClick={()=>navigate('/Tour')}>
                 <h2>
                 <a href="" className='Home_router_link'>
                   TICKETING AND HOSPITALITY

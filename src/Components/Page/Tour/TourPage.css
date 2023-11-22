@@ -84,3 +84,14 @@ background-color: #f3f6f9;
   .Tour_link{
 color: #001838;
   }
+
+
+  .Tour_Banner {
+    position: relative;
+    height: 350px;
+    width: 100%;
+    background: url(https://www.mancity.com/meta/media/4hoj5r1o/manchester_city_sact_shoot_28_06_2023_11950.jpg?width=1920&height=480&mode=crop)center no-repeat;
+    background-size:cover;
+    z-index: 1;
+
+}

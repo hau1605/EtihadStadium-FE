@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import LayoutBasic from '../../Common/LayoutBasic';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -8,11 +8,14 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import {  useNavigate } from "react-router-dom";
+
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Accordion from 'react-bootstrap/Accordion';
 
 const CustomPrevArrow = (props) => {
+
     const { onClick } = props;
     return (
         <button className="custom-prev-arrow" onClick={onClick}>
@@ -39,17 +42,16 @@ const TourPage = () => {
         nextArrow: <CustomNextArrow />,
         prevArrow: <CustomPrevArrow />
     };
-
     const today = new Date();
-
-    // Lấy giá trị ngày hiện tại dưới định dạng YYYY-MM-DD
     const formattedToday = today.toISOString().split('T')[0];
+
+const [showResult,setShowResult]=useState(false)
 
     return (
         <LayoutBasic>
             <div className="Home_layout">
 
-                <div className="Home_Banner">
+                <div className="Tour_Banner Home_Banner" >
 
                     <h1 style={{ fontSize: '32px' }}>MANCHESTER CITY STADIUM TOURS</h1>
                 </div>
@@ -93,14 +95,15 @@ const TourPage = () => {
                             </div>
                         </Col>
                     </Row>
-                    <Row style={{ margin: '30px 80px' }}>
+                    {showResult?'':<Row style={{ margin: '30px 80px' }}>
                         <Col>
                             <iframe width="100%" height="450" src="https://www.youtube.com/embed/eTY7oKHcIUM?si=UeAqm_dxqMAYXEzC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </Col>
-                    </Row>
+                    </Row>}
+                    
                     <Row>
                         <Col>
-                            <h1 style={{ fontWeight: 'bold', marginBottom: '50px' }}>CHOOSE YOUR TOUR</h1>
+                            <h1 style={{ fontWeight: 'bold', marginBottom: '40px',marginTop:'20px' }}>{showResult?'RESULT':'CHOOSE YOUR TOUR'}</h1>
 
                             <div className="Tour_Choose_div">
                                 <img src="https://www.mancity.com/meta/media/2einxwgx/manchester_city_sact_shoot_28_06_2023_11132.jpg?width=406" alt="" />
@@ -112,15 +115,42 @@ const TourPage = () => {
                                     <h4>£25 Per Adult (Off-Peak)</h4>
                                     <ul style={{ padding: '0' }}>
                                         <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '13px', margin: '0px' }}>
+                                            <p style={{ fontSize: '15px', margin: '0px' }}>
                                                 Field questions with a virtual Pep Guardiola in the Press Conference room                                    </p>
                                         </li>
                                         <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '13px', margin: '0px' }}>
+                                            <p style={{ fontSize: '15px', margin: '0px' }}>
                                                 Walk down the players' tunnel and go pitch-side to get a Pep's-eye view of the stadium from the dug-outs
                                             </p>                                </li>
                                         <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '13px', margin: '0px' }}>
+                                            <p style={{ fontSize: '15px', margin: '0px' }}>
+                                                Accessible & VIP tours available
+                                            </p>                                </li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div className="Tour_Choose_div">
+                                <img src="https://www.mancity.com/meta/media/2einxwgx/manchester_city_sact_shoot_28_06_2023_11132.jpg?width=406" alt="" />
+                                <div>
+                                    <h4 style={{ textTransform: 'uppercase', fontWeight: 'bold', marginBottom: '25px' }}>
+                                        The Manchester City Stadium Tour
+                                    </h4>
+                                    <p style={{ fontSize: '12px', color: '#69738c', margin: '0' }}>FROM</p>
+                                    <h4>£25 Per Adult (Off-Peak)</h4>
+                                    <ul style={{ padding: '0' }}>
+                                        <li style={{ marginLeft: '20px' }}>
+                                            <p style={{ fontSize: '15px', margin: '0px' }}>
+                                                Field questions with a virtual Pep Guardiola in the Press Conference room                                    </p>
+                                        </li>
+                                        <li style={{ marginLeft: '20px' }}>
+                                            <p style={{ fontSize: '15px', margin: '0px' }}>
+                                                Walk down the players' tunnel and go pitch-side to get a Pep's-eye view of the stadium from the dug-outs
+                                            </p>                                </li>
+                                        <li style={{ marginLeft: '20px' }}>
+                                            <p style={{ fontSize: '15px', margin: '0px' }}>
                                                 Accessible & VIP tours available
                                             </p>                                </li>
 
@@ -138,15 +168,15 @@ const TourPage = () => {
                                     <h4>£25 Per Adult (Off-Peak)</h4>
                                     <ul style={{ padding: '0' }}>
                                         <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '13px', margin: '0px' }}>
+                                            <p style={{ fontSize: '15px', margin: '0px' }}>
                                                 Field questions with a virtual Pep Guardiola in the Press Conference room                                    </p>
                                         </li>
                                         <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '13px', margin: '0px' }}>
+                                            <p style={{ fontSize: '15px', margin: '0px' }}>
                                                 Walk down the players' tunnel and go pitch-side to get a Pep's-eye view of the stadium from the dug-outs
                                             </p>                                </li>
                                         <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '13px', margin: '0px' }}>
+                                            <p style={{ fontSize: '15px', margin: '0px' }}>
                                                 Accessible & VIP tours available
                                             </p>                                </li>
 
@@ -164,15 +194,15 @@ const TourPage = () => {
                                     <h4>£25 Per Adult (Off-Peak)</h4>
                                     <ul style={{ padding: '0' }}>
                                         <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '13px', margin: '0px' }}>
+                                            <p style={{ fontSize: '15px', margin: '0px' }}>
                                                 Field questions with a virtual Pep Guardiola in the Press Conference room                                    </p>
                                         </li>
                                         <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '13px', margin: '0px' }}>
+                                            <p style={{ fontSize: '15px', margin: '0px' }}>
                                                 Walk down the players' tunnel and go pitch-side to get a Pep's-eye view of the stadium from the dug-outs
                                             </p>                                </li>
                                         <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '13px', margin: '0px' }}>
+                                            <p style={{ fontSize: '15px', margin: '0px' }}>
                                                 Accessible & VIP tours available
                                             </p>                                </li>
 
