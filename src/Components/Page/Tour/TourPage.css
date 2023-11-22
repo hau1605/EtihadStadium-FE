@@ -1,0 +1,86 @@
+/* Target the calendar icon of the date input */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    /* Custom styles for the calendar icon */
+    background-color: #e6ff00; /* Background color of the icon */
+    /* You can also use properties like width, height, border-radius, etc. */
+    cursor: pointer;
+  }
+  
+  /* Additional styles for the date input (optional) */
+  .custom-select {
+    /* Add padding to create space for the dropdown arrow */
+    padding-right: 20px; /* Adjust this value based on your needs */
+  
+    /* Remove default appearance for the arrow */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  
+    /* Add a background image for the dropdown arrow */
+    background-image: url('https://www.freeiconspng.com/thumbs/white-arrow-png/white-down-arrow-png-2.png'); /* Specify the path to your custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 15px center; /* Position the icon on the right */
+    background-size: 12px; /* Adjust the size of the icon */
+    /* You can also use other background properties like background-color, background-position, etc. */
+  }
+
+  .Tour_form input:hover,select:hover{
+    cursor: pointer;
+  }
+
+
+  .Tour_Choose_div{
+    display: flex;
+    border: 1px solid #dde6ed;
+    margin-bottom: 20px;
+    
+  }
+  .Tour_Choose_div div{
+    padding: 20px;
+  }
+  .Tour_Choose_div:hover{
+    border: 1px solid black;
+    cursor: pointer;
+  }
+
+
+  .slider-wrapper {
+    position: relative;
+  }
+  
+  /* Custom arrows style */
+ 
+  .custom-prev-arrow ,.custom-next-arrow {
+    position: absolute;
+    bottom: -50px;
+    width: 40px;
+    height: 40px;
+    background-color: #001838;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 4;
+    color: white;
+    border-radius: 50%;
+  }
+  
+  .custom-prev-arrow {
+    right: 160px;
+  }
+  
+  .custom-next-arrow {
+    right: 100px;
+  }
+  .Tour_slide_background{
+    position: absolute;
+width: 145px;
+height: 80px;
+bottom: -50px;
+right: 80px;
+
+background-color: #f3f6f9;
+  }
+  .Tour_link{
+color: #001838;
+  }
