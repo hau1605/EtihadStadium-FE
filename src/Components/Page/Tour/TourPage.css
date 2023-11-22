@@ -1,5 +1,5 @@
 /* Target the calendar icon of the date input */
-input[type="date"]::-webkit-calendar-picker-indicator {
+.Tour_form input[type="date"]::-webkit-calendar-picker-indicator {
     /* Custom styles for the calendar icon */
     background-color: #e6ff00; /* Background color of the icon */
     /* You can also use properties like width, height, border-radius, etc. */
