@@ -83,6 +83,7 @@ const TourPage = () => {
                                         </Col>
                                         <Col style={{ display: 'flex' }}>
                                             <button style={{
+                                                alignItems:'center',
                                                 display: 'flex', fontWeight: 'bold', textAlign: 'left', alignSelf: 'end', padding: '10px 10px', justifyContent: 'space-between',
                                                 backgroundColor: '#e6ff00', color: '#001838', width: '100%', border: 'none'
                                             }}>SEARCH <ArrowForwardIosIcon />   </button>
