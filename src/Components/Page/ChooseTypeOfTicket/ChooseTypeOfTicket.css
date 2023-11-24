@@ -47,6 +47,7 @@ body {
     position: relative;
     width: 14px;
     top: -1px;
+    margin-right: 2px;
 }
 .eventDetails div:not(.name) {
     display: inline-block;
@@ -80,4 +81,107 @@ body {
 .container-fluid .content .content-item .ops {
     float: right;
     margin-left: 0.5em;
+}
+
+
+.info-section-item {
+    margin-right: 24px;
+    font-family: Etihad_font_p;
+}
+
+.content {
+    display: table;
+    overflow: visible;
+    clear: both;
+    border: 1px solid #e9e9e9;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    font-family: Etihad_font_p;
+}
+
+.content h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+.priceType{
+    float: none;
+    margin: 0;
+    margin-left: 0;
+    font-weight: 600;
+}
+
+.content-item .price {
+    margin: 0;
+    float: none;
+    text-align: right;
+    font-weight: normal;
+    margin-left: 0.5rem;
+}
+
+.button {
+    font-size: 1.25rem;
+    border: none;
+    background-color: white;
+}
+.content-item .amount {
+    border: 1px solid #e9e9e9;
+    border-radius: 6px;
+    width: 18%;
+    position: absolute;
+    right: 20%;
+    display: flex;
+}
+.content-item {
+    font-size: 14px;
+}
+.content-item .total {
+    text-align: right;
+    display: block;
+    width: 7em;
+    position: absolute;
+    right: 8%;
+}
+
+.content-item .amount .plus-btn {
+    float: left;
+}
+.content-item .amount .minus-btn {
+    float: right;
+}
+.content-item .amount .button {
+    width: 50%;
+}
+.content-item .amount .result {
+    width: 100%;
+    text-align: center;
+}
+
+.summary {
+    margin: 1rem 0;
+}
+.summary p{
+    float: right;
+    clear: both;
+}
+.summary p.total{
+    font-size: 30px;
+}
+
+.continue {
+    width: 100%;
+    text-align: right;
+    margin: 2rem auto 2rem -2rem;
+}
+.continue button {
+    background-color: #001838 !important;
+    color: white !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    padding: 0.6rem 1.5rem;
+    border-color: #001838 !important;
+    border-width: 1px !important;
+    border-radius: 7px;
+    border-style: solid !important;
+    font-size: 20px;
 }

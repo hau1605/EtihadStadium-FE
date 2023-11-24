@@ -170,3 +170,7 @@ svg:not(:root) {
     height: 16px;
     margin-left: auto;
 }
+
+.ff-tours-timeslots__info-section, form .container {
+    font-family: Etihad_font_p;
+}

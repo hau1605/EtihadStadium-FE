@@ -22,9 +22,9 @@ const ChooseTypeOfTicket = () => {
                     <div class="eventInfoSection infoSection">
                         <div class="eventDetails" tabindex="0">
                             <div class="name" role="heading" aria-level="1">The Manchester City Stadium Tour</div>
-                            <div class="date"><span id="day3"> <img src={calendar} />Tue 21 Nov</span><span id="kickoff"><img src={clock} />15:30</span></div>
-                            <div class="location"> <img src={compass} />Stadium Tours</div>
-                            <div class="extra"></div>
+                            <div class="date info-section-item"><span id="day3"><img src={calendar} />Tue 21 Nov</span></div>
+                            <div class="date info-section-item"><span id="kickoff"><img src={clock} />15:30</span></div>
+                            <div class="location info-section-item"> <img src={compass} />Stadium Tours</div>
                         </div>
                     </div>
                     
@@ -35,61 +35,60 @@ const ChooseTypeOfTicket = () => {
                         <div className='content-item'>
                             <span className="priceType" aria-hidden="true">Adult</span>
                             <span className="price" data-labe="Price" aria-hidden="true">£25.00</span>
-                            <div classname='amount'>
-                                <a href="" className='btn-minus'></a>
-                                <input type="number" value={1} />
-                                <a href="" className='btn-plus'></a>
+                            <div className='amount'>
+                                <button className='plus-btn button'>+</button>
+                                <span className='result'>1</span>
+                                <button className='minus-btn button'>-</button>
                             </div>
                             <span class="total" data-labe="Total" aria-hidden="true">£25.00</span>
                         </div>
                         <div className='content-item'>
-                            <span className="priceType" aria-hidden="true">Adult</span>
-                            <span className="price" data-labe="Price" aria-hidden="true">£25.00</span>
-                            <div classname='amount'>
-                                <a href="" className='btn-minus'></a>
-                                <input type="number" value={1} />
-                                <a href="" className='btn-plus'></a>
+                            <span className="priceType" aria-hidden="true">Under 16</span>
+                            <span className="price" data-labe="Price" aria-hidden="true">£15.00</span>
+                            <div className='amount'>
+                                <button className='plus-btn button'>+</button>
+                                <span className='result'>1</span>
+                                <button className='minus-btn button'>-</button>
                             </div>
                             <span class="total" data-labe="Total" aria-hidden="true">£25.00</span>
                         </div>
                         <div className='content-item'>
-                            <span className="priceType" aria-hidden="true">Adult</span>
-                            <span className="price" data-labe="Price" aria-hidden="true">£25.00</span>
-                            <div classname='amount'>
-                                <a href="" className='btn-minus'></a>
-                                <input type="number" value={1} />
-                                <a href="" className='btn-plus'></a>
+                            <span className="priceType" aria-hidden="true">Student</span>
+                            <span className="price" data-labe="Price" aria-hidden="true">£17.00</span>
+                            <div className='amount'>
+                                <button className='plus-btn button'>+</button>
+                                <span className='result'>1</span>
+                                <button className='minus-btn button'>-</button>
                             </div>
                             <span class="total" data-labe="Total" aria-hidden="true">£25.00</span>
                         </div>
                         <div className='content-item'>
-                            <span className="priceType" aria-hidden="true">Adult</span>
-                            <span className="price" data-labe="Price" aria-hidden="true">£25.00</span>
-                            <div classname='amount'>
-                                <a href="" className='btn-minus'></a>
-                                <input type="number" value={1} />
-                                <a href="" className='btn-plus'></a>
+                            <span className="priceType" aria-hidden="true">Senior (65+)</span>
+                            <span className="price" data-labe="Price" aria-hidden="true">£17.00</span>
+                            <div className='amount'>
+                                <button className='plus-btn button'>+</button>
+                                <span className='result'>1</span>
+                                <button className='minus-btn button'>-</button>
                             </div>
                             <span class="total" data-labe="Total" aria-hidden="true">£25.00</span>
                         </div>
                         <div className='content-item'>
-                            <span className="priceType" aria-hidden="true">Adult</span>
-                            <span className="price" data-labe="Price" aria-hidden="true">£25.00</span>
-                            <div classname='amount'>
-                                <a href="" className='btn-minus'></a>
-                                <input type="number" value={1} />
-                                <a href="" className='btn-plus'></a>
+                            <span className="priceType" aria-hidden="true">Under 5</span>
+                            <span className="price" data-labe="Price" aria-hidden="true">£0.00</span>
+                            <div className='amount'>
+                                <button className='plus-btn button'>+</button>
+                                <span className='result'>1</span>
+                                <button className='minus-btn button'>-</button>
                             </div>
                             <span class="total" data-labe="Total" aria-hidden="true">£25.00</span>
                         </div>
                         <div className='summary'>
-                        <span class="total-label">Total</span>
-                        <span class="countTickets"><span class="numOfTickets non-zero">1</span> seats</span>
-                        <span class="total">£25.00</span>
+                        <p class="total-label">Total (1 seats):</p>
+                        <p class="total">£25.00</p>
                         </div>
                     </div>
                     <div className='continue'>
-                        <button>Continue</button>
+                        <button className='button small_button_a proceed'>Continue</button>
                     </div>
                 </div>
                 </div>
