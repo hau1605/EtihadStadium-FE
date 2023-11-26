@@ -25,6 +25,7 @@ import TypeProductList from './Components/Page/Admin/TypeProductList/TypeProduct
 import TypeProductEdit from './Components/Page/Admin/TypeProductEdit/TypeProductEdit';
 import NewTypeProduct from './Components/Page/Admin/NewTypeProduct/NewTypeProduct';
 import TourPage from './Components/Page/Tour/TourPage';
+import Checkout from './Components/Page/Checkout/Checkout';
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
       {
         path: "/ChooseTypeOfTicket",
         element: <ChooseTypeOfTicket />
+      },
+      {
+        path: "/Checkout",
+        element: <Checkout />
       },
       {
         path: "/Tour",

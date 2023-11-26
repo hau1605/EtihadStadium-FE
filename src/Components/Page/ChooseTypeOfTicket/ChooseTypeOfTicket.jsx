@@ -11,8 +11,8 @@ import compass from '../../../img/compass.png'
 import { useNavigate } from 'react-router-dom';
 const ChooseTypeOfTicket = () => {
     const navigate = useNavigate();
-    const chooseTime = () => {
-        navigate('/ChooseTypeOfTicket');
+    const Continue = () => {
+        navigate('/Checkout');
     }
     return (
         <LayoutBasic>
@@ -88,7 +88,7 @@ const ChooseTypeOfTicket = () => {
                         </div>
                     </div>
                     <div className='continue'>
-                        <button className='button small_button_a proceed'>Continue</button>
+                        <button className='button small_button_a proceed' onClick={Continue}>Continue</button>
                     </div>
                 </div>
                 </div>
