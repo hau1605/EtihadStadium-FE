@@ -67,8 +67,9 @@ const LayoutBasic = ({ children }) => {
                 <Link to='/Development' style={{color:'black',textDecoration:'none'}}>
                   <MenuItem sx={{minWidth: 120, justifyContent: 'center'}} onClick={handleClose}>Skema</MenuItem>
                 </Link>
-               
-                <MenuItem sx={{minWidth: 120, justifyContent: 'center'}} onClick={handleClose}>Visit 3D</MenuItem>
+                <Link to='/3d' style={{color:'black',textDecoration:'none'}}>
+                  <MenuItem sx={{minWidth: 120, justifyContent: 'center'}} onClick={handleClose}>Visit 3D</MenuItem>
+                </Link>
               </Menu>
             </Box>
             {
