@@ -26,6 +26,7 @@ import TypeProductEdit from './Components/Page/Admin/TypeProductEdit/TypeProduct
 import NewTypeProduct from './Components/Page/Admin/NewTypeProduct/NewTypeProduct';
 import TourPage from './Components/Page/Tour/TourPage';
 import Checkout from './Components/Page/Checkout/Checkout';
+import Model3DPage from './Components/Page/3d/Model3DPage';
 
 const router = createBrowserRouter([
   {
@@ -108,6 +109,10 @@ const router = createBrowserRouter([
         path: "Admin/NewTypeProduct",
         element: <NewTypeProduct />
       },
+      {
+        path:"3d",
+        element:<Model3DPage/>
+      }
     ],
   },
 ]);
