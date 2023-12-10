@@ -27,17 +27,12 @@ const Checkout = () => {
                         <hr />
                         <div className='step'>
                             <div className='stepIcon'>2</div>
-                            <div className='stepName'>Review Order</div>
+                            <div className='stepName'>Review Order & Checkout</div>
                         </div>
                         <hr />
                         <div className='step'>
                             <div className='stepIcon'>3</div>
-                            <div className='stepName'>Checkout</div>
-                        </div>
-                        <hr />
-                        <div className='step'>
-                            <div className='stepIcon'>4</div>
-                            <div className='stepName'>Checkout</div>
+                            <div className='stepName'>Result</div>
                         </div>
                     </div>
 
@@ -82,14 +77,14 @@ const Checkout = () => {
                                     <img src={edit}/>
                                     <span className='button-name'>Edit owner</span>
                                 </button>
-                                <div className='price-per-ticket'>
+                                {/* <div className='price-per-ticket'>
                                     <span className='ticket-label'>Price:</span>
                                     <span className='ticket-label-info'>£0.00</span>
                                 </div>
                                 <div className='fee-per-ticket'>
                                     <span className='ticket-label'>Fee:</span>
                                     <span className='ticket-label-info'>£0.00</span>
-                                </div>
+                                </div> */}
                                 <div className='to-pay-per-ticket'>
                                     <span className='ticket-label'>To Pay:</span>
                                     <span className='ticket-label-info'>£0.00</span>
@@ -117,14 +112,14 @@ const Checkout = () => {
                                     <img src={edit}/>
                                     <span className='button-name'>Edit owner</span>
                                 </button>
-                                <div className='price-per-ticket'>
+                                {/* <div className='price-per-ticket'>
                                     <span className='ticket-label'>Price:</span>
                                     <span className='ticket-label-info'>£0.00</span>
                                 </div>
                                 <div className='fee-per-ticket'>
                                     <span className='ticket-label'>Fee:</span>
                                     <span className='ticket-label-info'>£0.00</span>
-                                </div>
+                                </div> */}
                                 <div className='to-pay-per-ticket'>
                                     <span className='ticket-label'>To Pay:</span>
                                     <span className='ticket-label-info'>£0.00</span>
@@ -152,14 +147,14 @@ const Checkout = () => {
                                     <img src={edit}/>
                                     <span className='button-name'>Edit owner</span>
                                 </button>
-                                <div className='price-per-ticket'>
+                                {/* <div className='price-per-ticket'>
                                     <span className='ticket-label'>Price:</span>
                                     <span className='ticket-label-info'>£0.00</span>
                                 </div>
                                 <div className='fee-per-ticket'>
                                     <span className='ticket-label'>Fee:</span>
                                     <span className='ticket-label-info'>£0.00</span>
-                                </div>
+                                </div> */}
                                 <div className='to-pay-per-ticket'>
                                     <span className='ticket-label'>To Pay:</span>
                                     <span className='ticket-label-info'>£0.00</span>
@@ -172,6 +167,82 @@ const Checkout = () => {
                         <div className='summary-checkout'>
                             <p class="total-label">Total (1 seats):</p>
                             <p class="total">£25.00</p>
+                        </div>
+                        <div className='payment-method-container'>
+                            <div className='payment-blank'>
+
+                            </div>
+                            <div className='payment-method-content'>
+                                <h3>Payment method</h3>
+                                <hr />
+                                <div className="payment-methods">
+                            <div class="the-payment-method">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        readonly=""
+                                        name="payment-method"
+                                        value="momo"
+                                        // onChange={(e) =>
+                                        //     setMethod(e.target.value)
+                                        // }
+                                    />
+                                    <img
+                                        class="method-icon"
+                                        src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/checkout/icon-payment-method-momo.svg"
+                                        width="32"
+                                        height="32"
+                                        alt="icon"
+                                    />
+                                    <span>MOMO Payment</span>
+                                </label>
+                            </div>
+                            <div class="the-payment-method">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        readonly=""
+                                        name="payment-method"
+                                        value="vnpay"
+                                        // onChange={(e) =>
+                                        //     setMethod(e.target.value)
+                                        // }
+                                    />
+                                    <img
+                                        class="method-icon"
+                                        src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/checkout/icon-payment-method-vnpay.png"
+                                        width="32"
+                                        height="32"
+                                        alt="icon"
+                                    />
+                                    <span>VNPay Payment</span>
+                                </label>
+                            </div>
+                            <div class="the-payment-method">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        readonly=""
+                                        name="payment-method"
+                                        value="atm"
+                                        // onChange={(e) => {
+                                        //     setMethod(e.target.value);
+                                        // }}
+                                    />
+                                    <img
+                                        class="method-icon"
+                                        src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/checkout/icon-payment-method-atm.svg"
+                                        width="32"
+                                        height="32"
+                                        alt="icon"
+                                    />
+                                    <span>
+                                        Domestic ATM card/ Internet Banking
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                            </div>
                         </div>
                     </div>
                     <div className="check-out-footer">

@@ -47,40 +47,40 @@ const ChooseTypeOfTicket = () => {
                             <span className="price" data-labe="Price" aria-hidden="true">£15.00</span>
                             <div className='amount'>
                                 <button className='plus-btn button'>+</button>
-                                <span className='result'>1</span>
+                                <span className='result'>0</span>
                                 <button className='minus-btn button'>-</button>
                             </div>
-                            <span class="total" data-labe="Total" aria-hidden="true">£25.00</span>
+                            <span class="total" data-labe="Total" aria-hidden="true"></span>
                         </div>
                         <div className='content-item'>
                             <span className="priceType" aria-hidden="true">Student</span>
                             <span className="price" data-labe="Price" aria-hidden="true">£17.00</span>
                             <div className='amount'>
                                 <button className='plus-btn button'>+</button>
-                                <span className='result'>1</span>
+                                <span className='result'>0</span>
                                 <button className='minus-btn button'>-</button>
                             </div>
-                            <span class="total" data-labe="Total" aria-hidden="true">£25.00</span>
+                            <span class="total" data-labe="Total" aria-hidden="true"></span>
                         </div>
                         <div className='content-item'>
                             <span className="priceType" aria-hidden="true">Senior (65+)</span>
                             <span className="price" data-labe="Price" aria-hidden="true">£17.00</span>
                             <div className='amount'>
                                 <button className='plus-btn button'>+</button>
-                                <span className='result'>1</span>
+                                <span className='result'>0</span>
                                 <button className='minus-btn button'>-</button>
                             </div>
-                            <span class="total" data-labe="Total" aria-hidden="true">£25.00</span>
+                            <span class="total" data-labe="Total" aria-hidden="true"></span>
                         </div>
                         <div className='content-item'>
                             <span className="priceType" aria-hidden="true">Under 5</span>
                             <span className="price" data-labe="Price" aria-hidden="true">£0.00</span>
                             <div className='amount'>
                                 <button className='plus-btn button'>+</button>
-                                <span className='result'>1</span>
+                                <span className='result'>0</span>
                                 <button className='minus-btn button'>-</button>
                             </div>
-                            <span class="total" data-labe="Total" aria-hidden="true">£25.00</span>
+                            <span class="total" data-labe="Total" aria-hidden="true"></span>
                         </div>
                         <div className='summary'>
                         <p class="total-label">Total (1 seats):</p>

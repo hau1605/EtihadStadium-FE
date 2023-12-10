@@ -200,3 +200,28 @@ button.checkout {
     color: #fff;
     float: right;
 }
+
+.payment-method-container {
+    display: flex;
+}
+
+.payment-method-container .payment-blank {
+    width: 70%;
+}
+
+.payment-method-container .payment-method-content {
+    width: 30%;
+    text-align: left;
+}
+
+.payment-method-content h3 {
+    text-align: right;
+}
+
+.the-payment-method span {
+    margin-left: 4px;
+}
+
+.the-payment-method {
+    text-align: left;
+}

@@ -54,6 +54,18 @@ const TourDetail = () => {
                                 20 tickets available
                                 </span>
                             </button>
+                            <button className='ff-tours-timeslots__slot' onClick={chooseTime}>
+                                <b>9:00am</b>
+                                <span class="ff-tours-timeslots__slot-numbers">
+                                15 tickets available
+                                </span>
+                            </button>
+                            <button className='ff-tours-timeslots__slot' onClick={chooseTime}>
+                                <b>4:00pm</b>
+                                <span class="ff-tours-timeslots__slot-numbers">
+                                10 tickets available
+                                </span>
+                            </button>
                         </div>
                     </div>
                 </form>
