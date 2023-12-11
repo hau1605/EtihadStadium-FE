@@ -143,3 +143,16 @@ export const listTour = [
     {id: 5, product: 'dddd', type: 'Vip', price: '100$'},
     {id: 6, product: 'dddd', type: 'Vip', price: '100$'},
 ]
+
+export const listElement = [
+    {id: 1, type: 'Line', color: 'black', element: 'Line A1'},
+    {id: 2, type: 'Prism', height: '0.1', color: '#F0f0f0', element: 'Roof A1'},
+    {id: 3, type: 'Column', height: '98', color: 'white', element: 'Column E1'},
+    {id: 4, type: 'Meshobj', size: '1000', element: 'TV 1'},
+    {id: 5, type: 'Line', color: 'black', element: 'Line B1'},
+    {id: 6, type: 'Column', height: '108', color: 'white', element: 'Column A1'},
+    {id: 7, type: 'Prism', height: '2', color: '#B0C4DE', element: 'Stand Q1'},
+    {id: 8, type: 'Meshobj', size: '1000', element: 'Stand A1'},
+    {id: 9, type: 'Prism', height: '1.5', color: '#B0C4DE', element: 'Wall C1'},
+    {id: 10, type: 'Line', color: 'black', element: 'Line A2'},
+]

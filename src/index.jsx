@@ -27,6 +27,12 @@ import NewTypeProduct from './Components/Page/Admin/NewTypeProduct/NewTypeProduc
 import TourPage from './Components/Page/Tour/TourPage';
 import Checkout from './Components/Page/Checkout/Checkout';
 import Model3DPage from './Components/Page/3d/Model3DPage';
+import ElementList from './Components/Page/Admin/Elements/ElementList';
+import Model3DAdmin from './Components/Page/Admin/3D/3dModal';
+import NewPrism from './Components/Page/Admin/NewPrism/NewPrism';
+import NewColumn from './Components/Page/Admin/NewColumn/NewColumn';
+import NewLine from './Components/Page/Admin/NewLine/NewLine';
+import NewMeshobj from './Components/Page/Admin/NewMeshobj/NewMeshobj';
 
 const router = createBrowserRouter([
   {
@@ -108,6 +114,30 @@ const router = createBrowserRouter([
       {
         path: "Admin/NewTypeProduct",
         element: <NewTypeProduct />
+      },
+      {
+        path: "Admin/Elements",
+        element: <ElementList />
+      },
+      {
+        path:"Admin/3D",
+        element:<Model3DAdmin/>
+      },
+      {
+        path:"Admin/Prism",
+        element:<NewPrism/>
+      },
+      {
+        path:"Admin/Column",
+        element:<NewColumn/>
+      },
+      {
+        path:"Admin/Line",
+        element:<NewLine/>
+      },
+      {
+        path:"Admin/Meshobj",
+        element:<NewMeshobj/>
       },
       {
         path:"3d",

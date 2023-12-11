@@ -7,6 +7,12 @@ import {
   PersonAddAlt,
   AddBusiness,
   LocalAtm,
+  Apartment,
+  ViewInAr,
+  ViewWeek,
+  StackedLineChart,
+  RoomPreferences,
+  Engineering
 } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 export default function Sidebar() {
@@ -55,6 +61,47 @@ export default function Sidebar() {
               <li className="sidebarListItem">
                 <AddBusiness className="sidebarIcon" />
                 Thêm Tour
+              </li>
+            </Link>
+          </ul>
+        </div>
+        <div className="sidebarMenu">
+          <h3 className="sidebarTitile">Công trình</h3>
+          <ul className="sidebarList">
+            <Link to="/Admin/3D" className="link-admin">
+              <li className="sidebarListItem">
+                <Apartment className="sidebarIcon" />
+                3D Modal 
+              </li>
+            </Link>
+            <Link to="/Admin/Elements" className="link-admin">
+              <li className="sidebarListItem">
+                <Engineering className="sidebarIcon" />
+                Xem thành phần 
+              </li>
+            </Link>
+            <Link to="/Admin/Prism" className="link-admin">
+              <li className="sidebarListItem">
+                <ViewInAr className="sidebarIcon" />
+                Thêm khối
+              </li>
+            </Link>
+            <Link to="/Admin/Column" className="link-admin">
+              <li className="sidebarListItem">
+                <ViewWeek className="sidebarIcon" />
+                Thêm cột
+              </li>
+            </Link>
+            <Link to="/Admin/Line" className="link-admin">
+              <li className="sidebarListItem">
+                <StackedLineChart className="sidebarIcon" />
+                Thêm đường
+              </li>
+            </Link>
+            <Link to="/Admin/Meshobj" className="link-admin">
+              <li className="sidebarListItem">
+                <RoomPreferences className="sidebarIcon" />
+                Thêm đối tượng
               </li>
             </Link>
           </ul>
