@@ -42,22 +42,22 @@ export default function Orders() {
   const columns = [
     {
       field: "id",
-      headerName: "STT",
+      headerName: "No",
       width: 50,
     },
     {
       field: "name",
-      headerName: "Tên",
+      headerName: "Name",
       width: 180,
     },
     {
       field: "address",
-      headerName: "Địa chỉ",
-      width: 300,
+      headerName: "Address",
+      width: 200,
     },
     {
         field: "total",
-        headerName: "Tổng",
+        headerName: "Total",
         width: 100,
         renderCell: (params) => {
           return (
@@ -69,8 +69,8 @@ export default function Orders() {
       },
     {
       field: "pay_method",
-      headerName: "Thanh toán",
-      width: 100,
+      headerName: "Payment method",
+      width: 150,
       renderCell: (params) => {
         return (
           <div className="orderPayMethod">{params.row.pay_method}</div>
@@ -79,7 +79,7 @@ export default function Orders() {
     },
     {
       field: "status",
-      headerName: "Tình trạng",
+      headerName: "Status",
       width: 100,
       renderCell: (params) => {
         return (
@@ -91,7 +91,7 @@ export default function Orders() {
     },
     {
         field: "createdAt",
-        headerName: "Ngày đặt",
+        headerName: "Created at",
         width: 100,
         renderCell: (params) => {
           return (
@@ -103,7 +103,7 @@ export default function Orders() {
       },
     {
       field: "action",
-      headerName: "Hành động",
+      headerName: "Action",
       width: 150,
       renderCell: (params) => {
         return (
@@ -130,7 +130,7 @@ export default function Orders() {
   const rowsWithIds = listOrder.map((row, index) => ({ ...row, id: getRowId(row, index) }));
   return (
     <LayoutAdmin>
-      <h2>Quản lý đơn hàng</h2>
+      <h2>Booking manager</h2>
       <div className="tableOrderList" style={{ height: 800, width: "100%" }}>
       <DataGrid
         rows={rowsWithIds}

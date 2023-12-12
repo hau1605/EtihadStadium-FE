@@ -24,7 +24,8 @@
 }
 .sidebarTitile{
     font-size: 16px;
-    color: lightgray;
+    color: rgb(109, 96, 96);
+    font-weight: 800;
 }
 .sidebarList{
     padding: 5px;

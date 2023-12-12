@@ -80,18 +80,18 @@ export default function NewTypeProduct() {
   return (
     <LayoutAdmin>
       <Box p={3}>
-        <h2 className="newTypeProductTitle">Thêm sản phẩm</h2>
+        <h2 className="newTypeProductTitle">Add Tour</h2>
         <form className="newTypeProductForm">
           <div className="newTypeProductItem">
-            <label>Tên sản phẩm</label>
+            <label>Tour name</label>
             <input
               type="text"
-              placeholder="Áo thun DTCloth"
+              placeholder="Visit Etihad Stadium"
               onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div className="newTypeProductItem">
-            <label>Danh mục</label>
+            <label>Count</label>
             <select onChange={(e) => handleCata(e)}>
               {catas.map(function (item) {
                 return <option value={item._id}>{item.name}</option>;
@@ -99,7 +99,7 @@ export default function NewTypeProduct() {
             </select>
           </div>
           <div className="newTypeProductItem">
-            <label>Loại</label>
+            <label>Class</label>
             <select onChange={(e) => handleCataDetail(e)}>
               {cataDetail.map(function (item) {
                 return <option value={item._id}>{item.name}</option>;
@@ -107,15 +107,15 @@ export default function NewTypeProduct() {
             </select>
           </div>
           <div className="newTypeProductItem">
-            <label>Chất liệu</label>
+            <label>Date</label>
             <input
               type="text"
-              placeholder="Vải Cotton"
+              placeholder="12/12/2023"
               onChange={(e) => setMaterial(e.target.value)}
             />
           </div>
           <div className="newTypeProductItem">
-            <label>Giá</label>
+            <label>Price</label>
             <input
               type="text"
               placeholder="100.000đ"
@@ -123,7 +123,7 @@ export default function NewTypeProduct() {
             />
           </div>
           <div className="newTypeProductItem">
-            <label>Tỉ lệ giảm giá</label>
+            <label>Discount</label>
             <input
               type="text"
               placeholder="15%"
@@ -131,7 +131,7 @@ export default function NewTypeProduct() {
             />
           </div>
           <div className="newTypeProductItem">
-            <label>Mô tả</label>
+            <label>Description</label>
             <textarea
               cols="10"
               rows="5"
@@ -142,7 +142,7 @@ export default function NewTypeProduct() {
             className="newTypeProductButton"
             onClick={(e) => handleCreate(e)}
           >
-            Tạo
+            Create
           </button>
         </form>
         <Modal show={show} onHide={handleClose}>

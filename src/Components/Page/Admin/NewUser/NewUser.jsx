@@ -48,11 +48,11 @@ export default function NewUser() {
   };
   return (
     <LayoutAdmin>
-      <h2 className="newUserTitle">Thêm người dùng</h2>
+      <h2 className="newUserTitle">Add user account</h2>
           <form action=" " className="">
             <div className="newUserForm">
               <div className="newUserItem">
-                <label>Họ và tên</label>
+                <label>Full name</label>
                 <input
                   type="text"
                   placeholder="Nguyễn Văn A"
@@ -60,7 +60,7 @@ export default function NewUser() {
                 />
               </div>
               <div className="newUserItem">
-                <label>Giới tính</label>
+                <label>Gender</label>
                 <div className="newUserGender">
                   <label>
                     <input
@@ -69,7 +69,7 @@ export default function NewUser() {
                       value="Nam"
                       onChange={(e) => setGender(e.target.value)}
                     />{" "}
-                    Nam{" "}
+                    Female{" "}
                   </label>
                   <label>
                     <input
@@ -78,7 +78,7 @@ export default function NewUser() {
                       value="Nữ"
                       onChange={(e) => setGender(e.target.value)}
                     />{" "}
-                    Nữ{" "}
+                    Male{" "}
                   </label>
                   <label>
                     <input
@@ -87,24 +87,24 @@ export default function NewUser() {
                       value="Khác"
                       onChange={(e) => setGender(e.target.value)}
                     />{" "}
-                    Khác
+                    Others
                   </label>
                 </div>
               </div>
               <div className="newUserItem">
-                <label>Kiểu người dùng</label>
+                <label>Type of user</label>
                 <select
                   className="newUserSelect"
                   name="active"
                   id="active"
                   onChange={(e) => setLevel(e.target.value)}
                 >
-                  <option value="false">Người dùng</option>
+                  <option value="false">Normal</option>
                   <option value="true">Admin</option>
                 </select>
               </div>
               <div className="newUserItem">
-                <label>Ngày sinh</label>
+                <label>Date of birth</label>
                 <input
                   type="date"
                   placeholder="02/30/2000"
@@ -112,7 +112,7 @@ export default function NewUser() {
                 />
               </div>
               <div className="newUserItem">
-                <label>Số Điện Thoại</label>
+                <label>Phone</label>
                 <input
                   type="text"
                   placeholder="012 3456 789"
@@ -128,7 +128,7 @@ export default function NewUser() {
                 />
               </div>
               <div className="newUserItem">
-                <label>Mặt khẩu</label>
+                <label>Password</label>
                 <input
                   type="text"
                   placeholder="password"
@@ -136,7 +136,7 @@ export default function NewUser() {
                 />
               </div>
               <div className="newUserItem">
-                <label>Địa chỉ</label>
+                <label>Address</label>
                 <input
                   type="text"
                   placeholder="HCM"
@@ -145,20 +145,20 @@ export default function NewUser() {
               </div>
             </div>
             <button className="newUserButton" onClick={(e) => handleCreate(e)}>
-              Tạo
+              Create
             </button>
           </form>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Thông báo</Modal.Title>
+            <Modal.Title>Notify</Modal.Title>
           </Modal.Header>
-          <Modal.Body>Thêm thành công</Modal.Body>
+          <Modal.Body>Add successfully</Modal.Body>
           <Modal.Footer>
             <Button
               variant="secondary"
               onClick={(e) => navigate("/Admin/Users")}
             >
-              Đóng
+              Close
             </Button>
           </Modal.Footer>
         </Modal>

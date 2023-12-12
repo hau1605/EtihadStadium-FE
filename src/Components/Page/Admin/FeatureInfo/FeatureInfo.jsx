@@ -20,34 +20,34 @@ export default function FeatureInfo() {
   return (
     <div className='featured'>
       <div className="featuredItem">
-        <span className="featuredTitle">Doanh thu</span>
+        <span className="featuredTitle">Revenue</span>
         <div className="featuredMoneyContainer">
             <span className="featuredMoney">{Number(revenue).toLocaleString("vi-VN")} đ</span>
             <span className="featuredMoneyRate">
                 -11.4 <ArrowDownward className='featuredIcon negative'/>
             </span>
         </div>
-        <span className="featuredSub">So sánh với tháng trước</span>
+        <span className="featuredSub">Compared with last month</span>
       </div>
       <div className="featuredItem">
-        <span className="featuredTitle">Lợi nhuận</span>
+        <span className="featuredTitle">Profit</span>
         <div className="featuredMoneyContainer">
             <span className="featuredMoney">{Number(revenue*0.6).toLocaleString("vi-VN")} đ</span>
             <span className="featuredMoneyRate">
                 -1.4 <ArrowDownward className='featuredIcon negative'/>
             </span>
         </div>
-        <span className="featuredSub">So sánh với tháng trước</span>
+        <span className="featuredSub">Compared with last month</span>
       </div>
       <div className="featuredItem">
-        <span className="featuredTitle">Tỷ lệ chuyển đổi</span>
+        <span className="featuredTitle">Conversion Rate</span>
         <div className="featuredMoneyContainer">
             <span className="featuredMoney">76%</span>
             <span className="featuredMoneyRate">
                 +2.4 <ArrowUpward className='featuredIcon'/>
             </span>
         </div>
-        <span className="featuredSub">So sánh với tháng trước</span>
+        <span className="featuredSub">Compared with last month</span>
       </div>
     </div>
   )

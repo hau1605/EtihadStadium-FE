@@ -42,20 +42,12 @@ export default function UserList() {
 
   const columns = [
     { field: "id", headerName: "ID", width: 70 },
-    {
-      field: "user",
-      headerName: "Người dùng",
-      width: 100,
-      renderCell: (params) => {
-        return <div className="userListUser">{params.row.name}</div>;
-      },
-    },
     { field: "email", headerName: "Email", width: 250 },
-    { field: "phone", headerName: "SĐT", width: 150 },
-    { field: "address", headerName: "Địa chỉ", width: 150 },
+    { field: "phone", headerName: "Phone number", width: 150 },
+    { field: "address", headerName: "Address", width: 150 },
     {
       field: "birthdays",
-      headerName: "Ngày sinh",
+      headerName: "Birthday",
       width: 150,
       renderCell: (params) => {
         return <Moment format="DD/MM/YYYY">{params.row.birthday}</Moment>;
@@ -63,7 +55,7 @@ export default function UserList() {
     },
     {
       field: "action",
-      headerName: "Hành động",
+      headerName: "Action",
       width: 150,
       renderCell: (params) => {
         return (

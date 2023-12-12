@@ -26,13 +26,13 @@ export default function WidgetLg() {
   }
   return (
     <div className='widgetLg'>
-      <h3 className="widgetLgTitle"> Đơn hàng mới</h3>
+      <h3 className="widgetLgTitle"> New bookings</h3>
       <table className="widgetLgTable">
         <tr className="widgetLgTr">
-          <th className="widgetLgTh">Khách hàng</th>
-          <th className="widgetLgTh">Ngày</th>
-          <th className="widgetLgTh">Tổng</th>
-          <th className="widgetLgTh">Trạng thái</th>
+          <th className="widgetLgTh">Customer</th>
+          <th className="widgetLgTh">Date</th>
+          <th className="widgetLgTh">Total</th>
+          <th className="widgetLgTh">Status</th>
         </tr>
         {
           orders.map((order)=>(

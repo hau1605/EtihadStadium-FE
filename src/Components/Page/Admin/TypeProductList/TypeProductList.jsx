@@ -39,31 +39,23 @@ export default function TypeProductList() {
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
   };
-  var vnd = Intl.NumberFormat("vi-VN", {
-    style: "currency",
-    currency: "VND",
-  });
-
   const columns = [
     {
       field: "id",
       headerName: "ID",
       width: 50,
-      renderCell: (params) => {
-        return <p>{params.row.id}</p>;
-      },
     },
     {
       field: "product",
-      headerName: "Sản phẩm",
-      width: 350,
+      headerName: "Tour",
+      width: 250,
       renderCell: (params) => {
         return <div className="productListItem">{params.row.product}</div>;
       },
     },
     {
       field: "type",
-      headerName: "Loại",
+      headerName: "Class",
       width: 120,
       renderCell: (params) => {
         return (
@@ -75,19 +67,19 @@ export default function TypeProductList() {
     },
     {
       field: "gia",
-      headerName: "Giá",
+      headerName: "Price",
       width: 100,
       renderCell: (params) => {
         return (
           <div className="productListItem">
-            {vnd.format(params.row.price)}
+            {params.row.price}
           </div>
         );
       },
     },
     {
       field: "action",
-      headerName: "Hành động",
+      headerName: "Action",
       width: 150,
       renderCell: (params) => {
         return (
@@ -106,7 +98,7 @@ export default function TypeProductList() {
                 <Edit />{" "}
               </button>
             </Link>
-            <Button variant="primary" onClick={(e)=>handleShow(params.row.id)}>
+            <Button style={{backgroundColor: 'transparent', border: 'none'}} onClick={(e)=>handleShow(params.row.id)}>
               <DeleteOutline className="typeProductListDelete" />
             </Button>
           </>

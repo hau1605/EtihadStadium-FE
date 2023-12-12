@@ -22,7 +22,7 @@ export default function WidgetSm() {
 
   return (
     <div className="widgetSm">
-      <span className="widgetSmTitle">Người dùng mới</span>
+      <span className="widgetSmTitle">New users</span>
       <ul className="widgetSmList">
         {users.map((user) => (
           <li className="widgetSmListItem">

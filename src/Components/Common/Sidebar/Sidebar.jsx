@@ -25,13 +25,13 @@ export default function Sidebar() {
             <Link to="/Admin" className="link-admin">
               <li className="sidebarListItem">
                 <LineStyle className="sidebarIcon" />
-                Trang chủ
+                Dashboard
               </li>
             </Link>
             <Link to="/Admin/Orders" className="link-admin">
               <li className="sidebarListItem">
                 <LocalAtm className="sidebarIcon" />
-                Quản lý đơn hàng
+                Booking Manager
               </li>
             </Link>
           </ul>
@@ -42,31 +42,31 @@ export default function Sidebar() {
             <Link to="/Admin/Users" className="link-admin">
               <li className="sidebarListItem">
                 <PermIdentity className="sidebarIcon" />
-                Người dùng
+                User List
               </li>
             </Link>
             <Link to="/Admin/NewUser" className="link-admin">
               <li className="sidebarListItem">
                 <PersonAddAlt className="sidebarIcon" />
-                Thêm người dùng
+                Add User
               </li>
             </Link>
             <Link to="/Admin/TypeProducts" className="link-admin">
               <li className="sidebarListItem">
                 <Storefront className="sidebarIcon" />
-                Tour
+                Tour List
               </li>
             </Link>
             <Link to="/Admin/NewTypeProduct" className="link-admin">
               <li className="sidebarListItem">
                 <AddBusiness className="sidebarIcon" />
-                Thêm Tour
+                Add Tour
               </li>
             </Link>
           </ul>
         </div>
         <div className="sidebarMenu">
-          <h3 className="sidebarTitile">Công trình</h3>
+          <h3 className="sidebarTitile">Stadium</h3>
           <ul className="sidebarList">
             <Link to="/Admin/3D" className="link-admin">
               <li className="sidebarListItem">
@@ -77,31 +77,31 @@ export default function Sidebar() {
             <Link to="/Admin/Elements" className="link-admin">
               <li className="sidebarListItem">
                 <Engineering className="sidebarIcon" />
-                Xem thành phần 
+                Elements 
               </li>
             </Link>
             <Link to="/Admin/Prism" className="link-admin">
               <li className="sidebarListItem">
                 <ViewInAr className="sidebarIcon" />
-                Thêm khối
+                Add Prism
               </li>
             </Link>
             <Link to="/Admin/Column" className="link-admin">
               <li className="sidebarListItem">
                 <ViewWeek className="sidebarIcon" />
-                Thêm cột
+                Add Column
               </li>
             </Link>
             <Link to="/Admin/Line" className="link-admin">
               <li className="sidebarListItem">
                 <StackedLineChart className="sidebarIcon" />
-                Thêm đường
+                Add Line
               </li>
             </Link>
             <Link to="/Admin/Meshobj" className="link-admin">
               <li className="sidebarListItem">
                 <RoomPreferences className="sidebarIcon" />
-                Thêm đối tượng
+                Add Meshobj
               </li>
             </Link>
           </ul>

@@ -14,7 +14,7 @@ export default function Home() {
       <FeatureInfo />
         <Chart
           data={userData}
-          title="Phân tích người dùng"
+          title="User analytics"
           grid
           dataKey="Người dùng"
         />
