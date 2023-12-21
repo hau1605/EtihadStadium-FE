@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import LayoutBasic from '../../Common/LayoutBasic';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -8,8 +8,8 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import {  useNavigate } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
+import TourDataService from "../../services/tours";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Accordion from 'react-bootstrap/Accordion';
@@ -42,11 +42,41 @@ const TourPage = () => {
         nextArrow: <CustomNextArrow />,
         prevArrow: <CustomPrevArrow />
     };
+    const navigate = useNavigate();
     const today = new Date();
     const formattedToday = today.toISOString().split('T')[0];
-
-const [showResult,setShowResult]=useState(false)
-
+    const [tourData, setTourData] = useState([]);
+    const [numberOfTicket, setNumberOfTicket] = useState();
+    const [date, setDate] = useState();
+    useEffect(() => {
+        getAllDataTour()
+    }, []);
+    const [showResult,setShowResult]=useState(false)
+    const getAllDataTour = () => {
+        TourDataService.getAllTour()
+        .then((res) => {
+            setTourData(res.data);
+        }).catch((err) => console.error(err));
+    }
+    const handleTourClick = (paramName, name, date, price) => {
+        navigate('/ChooseTime', { state: {paramName: paramName,
+                                    tourName: name,
+                                    tourDate: date,
+                                    tourPrice: price
+                                }});
+    }
+    const handleSelectTicketNumber = (event) => {
+        setNumberOfTicket(event.target.value);
+    }
+    const handleCaptureDate = (event) => {
+        setDate(event.target.value);
+    }
+    const handleSearch = () => {
+        TourDataService.getTourBySearching(numberOfTicket, date)
+        .then((res) => {
+            setTourData(res.data);
+        }).catch((err) => console.error(err));
+    }
     return (
         <LayoutBasic>
             <div className="Home_layout">
@@ -66,7 +96,11 @@ const [showResult,setShowResult]=useState(false)
                                     <Row>
                                         <Col>
                                             <h6 style={{ color: 'white' }}>Number of tickets</h6>
-                                            <select class="custom-select" name="" id="" style={{ width: '100%', padding: '10px', backgroundColor: '#001838', color: 'white', border: '1px solid white' }}>
+                                            <select class="custom-select" 
+                                            name="" 
+                                            id="number-of-ticket" 
+                                            onChange={handleSelectTicketNumber}
+                                            style={{ width: '100%', padding: '10px', backgroundColor: '#001838', color: 'white', border: '1px solid white' }}>
                                                 <option value="1">1 ticket</option>
                                                 <option value="2">2 tickets</option>
                                                 <option value="3">3 tickets</option>
@@ -81,14 +115,15 @@ const [showResult,setShowResult]=useState(false)
                                         </Col>
                                         <Col>
                                             <h6 style={{ color: 'white' }}>Date</h6>
-                                            <input type="date" min={formattedToday} style={{ width: '100%', padding: '10px', backgroundColor: '#001838', color: 'white', border: '1px solid white' }} />
+                                            <input type="date" onChange={handleCaptureDate} min={formattedToday} style={{ width: '100%', padding: '10px', backgroundColor: '#001838', color: 'white', border: '1px solid white' }} />
                                         </Col>
                                         <Col style={{ display: 'flex' }}>
                                             <button style={{
                                                 alignItems:'center',
                                                 display: 'flex', fontWeight: 'bold', textAlign: 'left', alignSelf: 'end', padding: '10px 10px', justifyContent: 'space-between',
                                                 backgroundColor: '#e6ff00', color: '#001838', width: '100%', border: 'none'
-                                            }}>SEARCH <ArrowForwardIosIcon />   </button>
+                                            }}
+                                            onClick={handleSearch}>SEARCH <ArrowForwardIosIcon />   </button>
                                         </Col>
                                     </Row>
                                 </form>
@@ -104,112 +139,27 @@ const [showResult,setShowResult]=useState(false)
                     <Row>
                         <Col>
                             <h1 style={{ fontWeight: 'bold', marginBottom: '40px',marginTop:'20px' }}>{showResult?'RESULT':'CHOOSE YOUR TOUR'}</h1>
-
-                            <div className="Tour_Choose_div">
-                                <img src="https://www.mancity.com/meta/media/2einxwgx/manchester_city_sact_shoot_28_06_2023_11132.jpg?width=406" alt="" />
-                                <div>
-                                    <h4 style={{ textTransform: 'uppercase', fontWeight: 'bold', marginBottom: '25px' }}>
-                                        The Manchester City Stadium Tour
-                                    </h4>
-                                    <p style={{ fontSize: '12px', color: '#69738c', margin: '0' }}>FROM</p>
-                                    <h4>£25 Per Adult (Off-Peak)</h4>
-                                    <ul style={{ padding: '0' }}>
-                                        <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '15px', margin: '0px' }}>
-                                                Field questions with a virtual Pep Guardiola in the Press Conference room                                    </p>
-                                        </li>
-                                        <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '15px', margin: '0px' }}>
-                                                Walk down the players' tunnel and go pitch-side to get a Pep's-eye view of the stadium from the dug-outs
-                                            </p>                                </li>
-                                        <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '15px', margin: '0px' }}>
-                                                Accessible & VIP tours available
-                                            </p>                                </li>
-
-
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div className="Tour_Choose_div">
-                                <img src="https://www.mancity.com/meta/media/2einxwgx/manchester_city_sact_shoot_28_06_2023_11132.jpg?width=406" alt="" />
-                                <div>
-                                    <h4 style={{ textTransform: 'uppercase', fontWeight: 'bold', marginBottom: '25px' }}>
-                                        The Manchester City Stadium Tour
-                                    </h4>
-                                    <p style={{ fontSize: '12px', color: '#69738c', margin: '0' }}>FROM</p>
-                                    <h4>£25 Per Adult (Off-Peak)</h4>
-                                    <ul style={{ padding: '0' }}>
-                                        <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '15px', margin: '0px' }}>
-                                                Field questions with a virtual Pep Guardiola in the Press Conference room                                    </p>
-                                        </li>
-                                        <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '15px', margin: '0px' }}>
-                                                Walk down the players' tunnel and go pitch-side to get a Pep's-eye view of the stadium from the dug-outs
-                                            </p>                                </li>
-                                        <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '15px', margin: '0px' }}>
-                                                Accessible & VIP tours available
-                                            </p>                                </li>
-
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="Tour_Choose_div">
-                                <img src="https://www.mancity.com/meta/media/2einxwgx/manchester_city_sact_shoot_28_06_2023_11132.jpg?width=406" alt="" />
-                                <div>
-                                    <h4 style={{ textTransform: 'uppercase', fontWeight: 'bold', marginBottom: '25px' }}>
-                                        The Manchester City Stadium Tour
-                                    </h4>
-                                    <p style={{ fontSize: '12px', color: '#69738c', margin: '0' }}>FROM</p>
-                                    <h4>£25 Per Adult (Off-Peak)</h4>
-                                    <ul style={{ padding: '0' }}>
-                                        <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '15px', margin: '0px' }}>
-                                                Field questions with a virtual Pep Guardiola in the Press Conference room                                    </p>
-                                        </li>
-                                        <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '15px', margin: '0px' }}>
-                                                Walk down the players' tunnel and go pitch-side to get a Pep's-eye view of the stadium from the dug-outs
-                                            </p>                                </li>
-                                        <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '15px', margin: '0px' }}>
-                                                Accessible & VIP tours available
-                                            </p>                                </li>
-
-
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="Tour_Choose_div">
-                                <img src="https://www.mancity.com/meta/media/2einxwgx/manchester_city_sact_shoot_28_06_2023_11132.jpg?width=406" alt="" />
-                                <div>
-                                    <h4 style={{ textTransform: 'uppercase', fontWeight: 'bold', marginBottom: '25px' }}>
-                                        The Manchester City Stadium Tour
-                                    </h4>
-                                    <p style={{ fontSize: '12px', color: '#69738c', margin: '0' }}>FROM</p>
-                                    <h4>£25 Per Adult (Off-Peak)</h4>
-                                    <ul style={{ padding: '0' }}>
-                                        <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '15px', margin: '0px' }}>
-                                                Field questions with a virtual Pep Guardiola in the Press Conference room                                    </p>
-                                        </li>
-                                        <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '15px', margin: '0px' }}>
-                                                Walk down the players' tunnel and go pitch-side to get a Pep's-eye view of the stadium from the dug-outs
-                                            </p>                                </li>
-                                        <li style={{ marginLeft: '20px' }}>
-                                            <p style={{ fontSize: '15px', margin: '0px' }}>
-                                                Accessible & VIP tours available
-                                            </p>                                </li>
-
-
-                                    </ul>
-                                </div>
-                            </div>
+                            {
+                                tourData.map((item) => (
+                                    <div className="Tour_Choose_div" onClick={() => handleTourClick(item.paramName, item.name, item.date, item.price)}>
+                                        <img src="https://www.mancity.com/meta/media/2einxwgx/manchester_city_sact_shoot_28_06_2023_11132.jpg?width=406" alt="" />
+                                        <div>
+                                            <h4 style={{ textTransform: 'uppercase', fontWeight: 'bold', marginBottom: '25px' }}>
+                                                { item.name }
+                                            </h4>
+                                            <p style={{ fontSize: '12px', color: '#69738c', margin: '0' }}>FROM</p>
+                                            <h4>£ { item.price } Per Adult (Off-Peak)</h4>
+                                            <ul style={{ padding: '0' }}>
+                                                <li style={{ marginLeft: '20px' }}>
+                                                    <p style={{ fontSize: '15px', margin: '0px' }}>
+                                                        { item.description}
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                ))
+                            }
                         </Col>
                     </Row>
                     <Row>
